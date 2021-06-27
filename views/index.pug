@@ -2,11 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
 
-  ul
+  ul(class='items')
     each item in contents
-      li
-        a(href=item.link)
-          h3= item.title
-        p= item.description
+      li(class='item')
+        div(class='content')
+          a(href=item.link)
+            h3= item.title
+          p= item.description

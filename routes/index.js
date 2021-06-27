@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const puppeteer = require('puppeteer');
 const rss_parse = require('rss-parser');
 const parser = new rss_parse();
 
@@ -19,7 +18,7 @@ router.get('/', function(req, res, next) {
       });
     });
   
-    res.render('index', { title: feed.title, contents: contents });
+    res.render('index', { title: feed.generator, contents: contents });
   })();
 });
 
